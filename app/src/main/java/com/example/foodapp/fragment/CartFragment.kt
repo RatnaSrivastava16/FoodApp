@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.foodapp.PayOutActivity
 import com.example.foodapp.R
 import com.example.foodapp.adapter.CartAdapter
 import com.example.foodapp.databinding.FragmentCartBinding
+import android.content.Intent
 
 
 class CartFragment : Fragment() {
@@ -29,6 +31,10 @@ class CartFragment : Fragment() {
         val adapter= CartAdapter(ArrayList(cartFoodName),ArrayList(cartItemPrice),ArrayList(cartImage))
         binding.cartRecyclerView.layoutManager= LinearLayoutManager(requireContext())
         binding.cartRecyclerView.adapter=adapter
+        binding.ProceedButton.setOnClickListener {
+            val intent= Intent(requireContext(), PayOutActivity::class.java)
+            startActivity(intent)
+        }
         return binding.root
     }
 

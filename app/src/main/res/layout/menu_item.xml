@@ -29,6 +29,8 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -52,29 +54,27 @@
                 android:id="@+id/menuPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/akaya_telivigala"
                 android:text="$5"
                 android:textSize="17sp"
-                android:fontFamily="@font/akaya_telivigala"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/menufoodName"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintBottom_toTopOf="@+id/menuaddToCart"
+                app:layout_constraintEnd_toEndOf="@+id/menuaddToCart"
+                app:layout_constraintStart_toStartOf="@+id/menuaddToCart" />
 
             <TextView
                 android:id="@+id/menuaddToCart"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginEnd="24dp"
                 android:background="@drawable/shape"
+                android:fontFamily="@font/akaya_telivigala"
                 android:gravity="center"
                 android:text="Add to Cart"
-                android:fontFamily="@font/akaya_telivigala"
                 android:textAlignment="gravity"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/menuPrice"
-                app:layout_constraintStart_toStartOf="@+id/menuPrice"
-                app:layout_constraintTop_toBottomOf="@+id/menuPrice" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
