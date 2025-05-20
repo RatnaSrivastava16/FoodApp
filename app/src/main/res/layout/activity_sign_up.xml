@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/userName"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:layout_marginTop="24dp"
@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/userEmail"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:layout_marginTop="24dp"
@@ -84,12 +84,12 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintEnd_toEndOf="@+id/userName"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/userPassword"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:layout_marginTop="24dp"
@@ -102,9 +102,9 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
+        app:layout_constraintEnd_toEndOf="@+id/userEmail"
+        app:layout_constraintStart_toStartOf="@+id/userEmail"
+        app:layout_constraintTop_toBottomOf="@+id/userEmail" />
 
     <TextView
         android:id="@+id/textView15"
@@ -113,9 +113,9 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/akaya_telivigala"
         android:text="Or"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/userPassword"
+        app:layout_constraintStart_toStartOf="@+id/userPassword"
+        app:layout_constraintTop_toBottomOf="@+id/userPassword" />
 
     <TextView
         android:id="@+id/textView16"
@@ -128,7 +128,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/googleBtn"
         android:layout_width="152dp"
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
@@ -154,11 +154,11 @@
         android:text="Facebook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/googleBtn"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button6"
+        android:id="@+id/createBtn"
         android:layout_width="165dp"
         android:layout_height="52dp"
         android:layout_marginTop="16dp"
@@ -181,5 +181,5 @@
         android:text="Already Have an Account?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/createBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
