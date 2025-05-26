@@ -32,11 +32,38 @@ class CartFragment : Fragment() {
         retrieveCartItems()
 
         binding.ProceedButton.setOnClickListener {
-            val intent = Intent(requireContext(), PayOutActivity::class.java)
-            startActivity(intent)
+           getOrderItemDetail()
         }
 
         return binding.root
+    }
+    private fun getOrderItemDetail() {
+        if (!::adapter.isInitialized || cartItemList.isEmpty()) return
+
+        val foodNames = mutableListOf<String>()
+        val foodPrices = mutableListOf<String>()
+        val foodDescriptions = mutableListOf<String>()
+        val foodImages = mutableListOf<String>()
+        val foodIngredients = mutableListOf<String>()
+        val foodQuantities = adapter.getUpdatedItemQuantities()
+
+        for (item in cartItemList) {
+            foodNames.add(item.foodName ?: "")
+            foodPrices.add(item.foodPrice ?: "")
+            foodDescriptions.add(item.foodDescription ?: "")
+            foodImages.add(item.foodImage ?: "")
+            foodIngredients.add(item.foodIngredient ?: "")
+        }
+
+        // You can now use these lists, e.g., send to PayOutActivity
+        val intent = Intent(requireContext(), PayOutActivity::class.java)
+        intent.putStringArrayListExtra("foodNames", ArrayList(foodNames))
+        intent.putStringArrayListExtra("foodPrices", ArrayList(foodPrices))
+        intent.putStringArrayListExtra("foodDescriptions", ArrayList(foodDescriptions))
+        intent.putStringArrayListExtra("foodImages", ArrayList(foodImages))
+        intent.putStringArrayListExtra("foodIngredients", ArrayList(foodIngredients))
+        intent.putIntegerArrayListExtra("foodQuantities", ArrayList(foodQuantities))
+        startActivity(intent)
     }
 
     private fun retrieveCartItems() {
@@ -72,3 +99,5 @@ class CartFragment : Fragment() {
         binding.cartRecyclerView.adapter = adapter
     }
 }
+
+

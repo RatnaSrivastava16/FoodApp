@@ -32,6 +32,15 @@ class CartAdapter(
     }
 
     override fun getItemCount(): Int = cartItems.size
+    fun getUpdatedItemQuantities(): MutableList<Int> {
+        val itemQuantities = mutableListOf<Int>()
+        for (item in cartItems) {
+            val quantity = item.foodQuantity?.toIntOrNull() ?: 1
+            itemQuantities.add(quantity)
+        }
+        return itemQuantities
+    }
+
 
     inner class CartViewHolder(private val binding: CartItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -39,7 +48,6 @@ class CartAdapter(
         fun bind(position: Int) {
             val item = cartItems[position]
             val quantity = item.foodQuantity?.toIntOrNull() ?: 1
-
             binding.cartFoodName.text = item.foodName
             binding.cartItemPrice.text = item.foodPrice
             binding.cartItemQuantity.text = quantity.toString()
@@ -115,5 +123,9 @@ class CartAdapter(
                 }
             })
         }
+    }
+
+    companion object {
+
     }
 }

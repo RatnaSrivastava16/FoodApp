@@ -36,7 +36,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/NameEditText"
+            android:id="@+id/UserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -70,7 +70,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/AddressEditText"
+            android:id="@+id/UserAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -105,7 +105,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/EmailEditText"
+            android:id="@+id/UserEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -139,7 +139,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/PhoneEditText"
+            android:id="@+id/UserPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -152,7 +152,7 @@
 </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button7"
+        android:id="@+id/saveInfoBtn"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@drawable/edit_text_profile_bg"
