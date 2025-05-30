@@ -51,12 +51,6 @@
 
 ---
 
-## 📌 Notes
-
-- Backend or database integration is not included in this structure.
-- UI layouts and resources (XML files) are assumed to be configured.
-
----
 
 ## 📄 License
 
