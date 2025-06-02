@@ -1,5 +1,4 @@
 
----
 
 # For Admin App [click here](https://github.com/RatnaSrivastava16/AdminFoodApp)
 ## 🧩 Features
