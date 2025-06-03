@@ -41,14 +41,6 @@
 
 ---
 
-## 🚀 Getting Started
-
-1. Clone this repository
-2. Open in Android Studio
-3. Sync Gradle files
-4. Run on an emulator or Android device
-
----
 
 
 
